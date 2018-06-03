@@ -28,8 +28,6 @@ node_modules/
 # ============ #
 dploy.yaml
 
-# Ignore build
-build/
 
 # Package lock
 package-lock.json

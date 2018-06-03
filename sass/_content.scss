@@ -31,3 +31,445 @@
 	clear: both;
 	margin: 0 0 $base__space-unit;
 }
+
+// ------------------------------------------------------------
+
+
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+body {
+	background-color: #222222
+}
+
+body {
+	font-size: 1rem;
+	line-height: 1.5;
+	font-family: 'Exo', sans-serif;
+	color: #ffffff;
+}
+
+a, a:visited {
+	color: #00cc00;
+	text-decoration: none;
+}
+
+.container {
+	padding: 3%;
+	margin: 0 auto;
+	max-width: 1080px;
+}
+
+
+ ul  {
+	list-style: none;
+	display: flex;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.footer-navigation li {
+	padding: 0 1rem;
+	border-right: 1px solid white;
+	line-height: 1rem;
+	font-weight: lighter;
+}
+
+.footer-navigation li:first-child {
+	padding-left: 0;
+}
+
+.footer-navigation li:last-child {
+	border: none;
+	@include tablet {
+		border-right: 1px solid white;
+	}
+
+	 @include desktop {
+		border-right: 1px solid white;
+
+	 }
+}
+
+.logo img {
+	width: 19rem;
+	@include tablet {
+		width: 30rem;
+	}
+	@include desktop {
+		width: 43rem;
+	}
+}
+
+.site-header {
+	margin-top: 3rem;
+	@include desktop {
+		display:flex;
+		justify-content:center;
+	}
+}
+
+.site-info {
+	margin: 4rem 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.site-info p {
+	flex: 0 1 100%;
+	margin-top: 0;
+	font-weight: 200;
+	@include tablet {
+		flex: 0 1 auto;
+		position: relative;
+		bottom: 0.3rem;
+		padding-left:1rem; 
+
+	}
+}
+
+button[type="button"] {
+	color: #00cc00;
+	border: 2px solid #00cc00;
+	background: #222222;
+	box-shadow: none;
+	text-shadow: none;
+	padding: .8rem 2rem;
+	font-size: 1rem;
+	outline: none;
+
+	&:hover {
+		border-color: #01aa01;
+		color: #01aa01;
+		box-shadow: none;
+	}
+
+	&:active,
+	&:focus {
+		border-color: #01aa01;
+		color: #01aa01;
+		box-shadow: none;
+	}
+}
+
+.entry-content p {
+	font-size: 1.25rem;
+	font-weight: 300;
+	@include tablet {
+		font-size:1.7rem;
+	}
+	@include desktop {
+		font-size: 2.5rem;
+		width: 43rem;
+		
+		
+	}
+}
+
+.home {
+	.entry-content {
+		margin-top: 3rem;
+	}	
+
+	.entry-meta h2 {
+		font-weight: 200;
+	}
+
+	button[type="button"] {
+		color: #00cc00;
+		border: 2px solid #00cc00;
+		background: #222222;
+		box-shadow: none;
+		text-shadow: none;
+		padding: .8rem 2rem;
+		font-size: 1rem;
+		outline: none;
+
+		&:hover {
+			border-color: #01aa01;
+			color: #01aa01;
+			box-shadow: none;
+		}
+
+		&:active,
+		&:focus {
+			border-color: #01aa01;
+			color: #01aa01;
+			box-shadow: none;
+		}
+
+		@include desktop {
+			
+
+		}
+
+	}
+
+	.entry-title {
+		display: inline;
+		@include desktop {
+
+		}
+
+	
+	}
+
+
+}
+
+.page-id-107 {
+	.entry-content p {
+		font-size: 1rem;
+		font-weight: 300;
+	}
+
+	.site-info {
+		margin: 6rem 0;
+	}
+
+	.post-archives .clearfix ul li {
+		float: left;
+	}
+
+	.post-archives ul {
+		display: block;
+	}
+	
+}
+
+.page-id-113 {
+	.post-archives li, .category-archives li, .tag-archives li {
+		float: left;
+		font-size: 1rem;
+		font-weight: 200;
+		margin-right: 1rem;
+		margin-bottom: 10px;
+
+		@include tablet {
+			font-size: 1.2rem!important;
+			a {
+				font-size: 1.2rem!important;
+			}
+		}
+
+		@include desktop {
+			font-size: 1.2rem;
+			a {
+				font-size: 1.2rem!important;
+			}
+			
+		}
+		
+	}
+
+
+
+	.post-archives ul, .category-archives ul, .tag-archives ul {
+		display: block;
+	}
+
+	@include desktop {
+		.entry-header h1 {
+			font-size: 2rem;
+			font-weight: bold;
+		}
+
+		.site-content {
+			margin-top: 4rem;
+		}
+	}
+}
+
+
+.single-post {
+	.entry-title {
+		display: inline;
+	}
+}
+
+.category, .tag {
+	.page-title {
+		border-bottom:1px dashed #ffffff;
+		padding-bottom: 1rem;
+	}
+
+	article {
+		border-bottom:1px dashed #ffffff;
+		padding-bottom: 2rem;
+	}
+
+	.entry-title {
+		display: inline;
+	}
+}
+
+.page-id-111 {
+	.entry-title {
+		font-weight: 400;
+	}
+
+	#quote-submission-form div  {
+		display: flex;
+		flex-direction: column;
+	}
+
+	label {
+		font-weight: lighter;
+		outline: none;
+		color: $text-color;
+		&:focus {
+			border-color: #01aa01;
+		}
+	}
+
+	input[type="text"], input[type="url"], textarea {
+		margin: 1rem 0;
+		background-color: $background-color ;
+		border: 2px solid $green-color;
+		outline: none;
+		color: $text-color;
+		&:focus {
+			border-color: $text-color;
+
+		}
+	}
+
+	input[type="text"], input[type="url"] {
+		width: 60%;
+	}
+
+
+	input[type=submit] {		
+		color: #00cc00;
+		border: 2px solid #00cc00;
+		background: #222222;
+		box-shadow: none;
+		text-shadow: none;
+		padding: .8rem 2rem;
+		font-size: 1rem;
+		outline: none;
+
+		&:hover {
+			border-color: #01aa01;
+			color: #01aa01;
+			box-shadow: none;
+		}
+
+		&:active, &:focus {
+			border-color: #01aa01;
+			color: #01aa01;
+			box-shadow: none;
+		}
+
+	}
+
+	.entry-header {
+		margin-top: 4rem;
+	}
+
+	.site-footer {
+		padding-top: 3rem;
+	}
+}
+
+@include desktop {
+	.site-content:before {
+		content: "\f10d";
+		color: $green-color;
+		font-family: 'FontAwesome';
+		font-size: 8rem;
+		position: absolute;	
+		top: 0;
+		line-height: 150px;
+		left: -10rem;
+		
+	}
+
+	.site-content:after {
+		content: "\f10e";
+		color: $green-color;
+		font-family: 'FontAwesome';
+		font-size: 8rem;
+		position: absolute;
+		top: 0;
+		line-height: 150px;
+		right: -8rem;
+					
+	}
+
+	
+	.entry-title {
+		font-size: 1.2rem;
+		font-weight: lighter;
+		display: inline;
+	}
+
+
+	.site-content {
+		margin: 0 10rem;
+		position: relative;
+	}
+
+	#new-quote-button {
+		margin: 0 auto;
+		display: block;
+	}
+
+	.site-info {
+		justify-content: flex-end;
+	}
+
+	.site-info p {
+		flex: 0 1 auto;
+		position: relative;
+		bottom: 0.3rem;
+		padding-left:1rem; 
+	}
+
+
+}
+
+
+.error404, .search {
+	fieldset {
+		border: none;
+	}
+
+	input[type="search"]{
+		background-color: $background-color ;
+		border: 2px solid $green-color;
+		outline: none;
+		color: $text-color;
+		width: 13rem;
+		&:focus {
+			border-color: white;
+			
+		}
+	}
+
+	button {
+		color: #00cc00;
+		border: none;
+		background: none;
+		box-shadow: none;
+		font-size: 1.2rem;
+		&:focus {
+			border-color: #01aa01;
+			color: #01aa01;
+			box-shadow: none;
+			border: none;
+			outline: none;
+		}
+	}
+
+
+}
+
+.search {
+	.page-title {
+		border-bottom:1px dashed #ffffff;
+
+	}
+}

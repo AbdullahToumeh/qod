@@ -68,10 +68,21 @@ function qod_scripts() {
 	wp_enqueue_style( 'font-awesome-cdn', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), '4.4.0' );
 
 	wp_enqueue_script( 'qod-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
-
+	
 	/**
-	 * @TODO add localize script rest api JavaScript
+	 * @TODO add localize script rest api JavaScript Done
 	 */
+
+	if(function_exists('rest_url')){
+		wp_enqueue_script('qod_api', get_template_directory_uri() . '/build/js/api.min.js', array(), false, true);
+		wp_localize_script('qod_api', 'api_vars', array(
+			'root_url' => esc_url_raw(rest_url()),
+			'home_url' => esc_url_raw(home_url()), 
+			'nonce' => wp_create_nonce('wp_rest'),
+			'success' => 'Thanks, your quote submission was received!',
+			'failure' => 'Your submissoin could not be processed'
+		));
+	}
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );
 
@@ -95,3 +106,5 @@ require get_template_directory() . '/inc/metaboxes.php';
  */
  require get_template_directory() . '/inc/api.php';
  
+
+//  ----------------
